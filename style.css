@@ -1,0 +1,351 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   MOBILE DESIGN (Screens <= 768px) -> Photo 1
+   ========================================= */
+body {
+  background-color: #f3f7f8;
+  color: #0b463e;
+}
+
+.navbar {
+  background-color: #07443c;
+  color: #ffffff;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 4px solid #f27b13;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.brand-logo {
+  width: 38px;
+  height: 38px;
+  background: #f27b13;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #07443c;
+}
+
+.brand-logo svg {
+  width: 24px;
+  height: 24px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.brand-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.brand-sub {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+}
+
+.desktop-links,
+.desktop-only,
+.desktop-label {
+  display: none;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.icon-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #f27b13;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile 404 Hero */
+.hero-404 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem 2rem;
+  text-align: center;
+}
+
+.hero-artwork img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 460px;
+  margin-top: 1rem;
+}
+
+.text-block h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #07443c;
+  margin-bottom: 0.35rem;
+}
+
+.text-block .highlight {
+  color: #f27b13;
+}
+
+.accent-bar {
+  width: 68px;
+  height: 4px;
+  background: linear-gradient(90deg, #f27b13 65%, #07443c 65%);
+  border-radius: 2px;
+  margin: 0.5rem auto 0.85rem;
+}
+
+.text-block p {
+  font-size: 0.95rem;
+  color: #334155;
+  margin-bottom: 1.5rem;
+}
+
+.cta-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background-color: #07443c;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(7, 68, 60, 0.25);
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #07443c;
+  border: 2px solid #07443c;
+}
+
+/* =========================================
+   LAPTOP / DESKTOP DESIGN (> 768px) -> Photo 2
+   ========================================= */
+@media (min-width: 769px) {
+  body {
+    background-color: #040d18;
+    color: #ffffff;
+  }
+
+  .mobile-only,
+  .mobile-label {
+    display: none;
+  }
+
+  .desktop-links,
+  .desktop-only {
+    display: flex;
+  }
+
+  .desktop-label {
+    display: inline;
+  }
+
+  .navbar {
+    background: linear-gradient(180deg, rgba(4, 13, 24, 0.95) 0%, rgba(4, 13, 24, 0.75) 100%);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+    padding: 1rem 2.5rem;
+  }
+
+  .brand-logo {
+    background: #0284c7;
+    color: #ffffff;
+  }
+
+  .desktop-links {
+    gap: 2rem;
+  }
+
+  .desktop-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .desktop-links a:hover {
+    color: #f27b13;
+  }
+
+  /* Full-screen Dark Industrial Hero */
+  .hero-404 {
+    position: relative;
+    justify-content: flex-end;
+    padding: 0 2rem 3.5rem;
+  }
+
+  .hero-artwork {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-artwork img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+  }
+
+  /* Dark gradient vignette so clickable buttons stand out cleanly */
+  .hero-404::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 35%, rgba(4, 13, 24, 0.75) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 540px;
+    background: rgba(6, 18, 34, 0.78);
+    backdrop-filter: blur(8px);
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .text-block h1 {
+    color: #ffffff;
+    font-size: 2.25rem;
+  }
+
+  .text-block p {
+    color: #cbd5e1;
+  }
+
+  .cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .btn {
+    padding: 0.85rem 1.75rem;
+  }
+
+  .btn-primary {
+    background-color: #f27b13;
+    color: #ffffff;
+    box-shadow: 0 4px 18px rgba(242, 123, 19, 0.45);
+  }
+
+  .btn-primary:hover {
+    background-color: #ea580c;
+  }
+
+  .btn-secondary {
+    background-color: rgba(15, 23, 42, 0.7);
+    color: #ffffff;
+    border: 1.5px solid #38bdf8;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+  }
+
+  .btn-secondary:hover {
+    background-color: rgba(56, 189, 248, 0.15);
+  }
+}
